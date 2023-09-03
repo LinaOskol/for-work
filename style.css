@@ -1,57 +1,114 @@
+@font-face{
+    font-family: "OpenSans-Regular";
+    src:url("fonts/OpenSans-Regular.ttf");
+
+}
+@font-face{
+    font-family: "VarelaRound-Regular";
+    src:url("fonts/VarelaRound-Regular.ttf")
+}
+header {
+    height: 105px;
+    width: 100%;
+    background-color: #ffffff;
+
+}
+header .container{
+    
+    justify-content: space-between;
+    align-items: center;
+}
+body{
+    background-color:#F8F8F8;
+    ;
+}
 .up_cap{
     
     background-color: #A5C926;
-    background-size: 1440px 32px;
+    width: 100%;
+    height: 32px;
+    display: flex;
 
 }
 .nav_disable{
     display: flex;
+    text-decoration: none;
 }
+
 ul {
-    list-style-type: none; 
-    
+    list-style-type: none;     
 }
 
 .header__menu-lin{
-    font-family: 'Inter', sans-serif;
-font-family: 'Nunito Sans', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Varela Round', sans-serif;
+    font-family: "OpenSans-Regular";
+    color: #000000;
     font-size: 21px;
-    margin-left: 120px;
+   margin-right:36px ;
+    margin-left: 135px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 .header__menu-link{
-    margin-right:30px ;
+    margin-right:36px ;
+    color: #000000;
     text-decoration: none;
-    font-family: 'Inter', sans-serif;
-font-family: 'Nunito Sans', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Varela Round', sans-serif;
+    
 
 }
-cap1{
+.header__menu-link1{
+    color: #000000;
+    text-decoration: none;
+    margin-right: 13px;
+    
+}
+.call{
     font-size: 10px;
     font-family: 'Inter', sans-serif;
     color: hsl(0, 0%, 100%);
-    margin-left: 120px ;
+    margin-left: 135px ;
+    margin-top: 8px;
 }
-cap2{
+.email{
     font-size: 10px;
     font-family: 'Inter', sans-serif;
     color: hsl(0, 0%, 100%);
-    margin-left: 40px;
+    margin-left: 30px;
+    margin-top: 8px;
 }
+.icon {
+    margin-left: 714px;
+    margin-top: 7px;
+}
+.icons{
+    margin-right: 15px;
+
+}
+
+.basket img{
+    display: block;
+}
+
 .header__menu {
     display: flex;
-    gap: 0 30px;
+    font-family: "OpenSans-Regular";
     margin-top: 25px;
     font-size: 14px;
-    color: #000000;
+    line-height: 24px;
+
+    
 }
 .header__menu-item2{
-    margin-left: 500px;
+    margin-left: 580px;
+}
+.quantity{
+    margin-top: 25px;
+    color: #ffffff;
+    background-color: #A5C926;
+    margin-left: 13px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
 }
 .start{
     height: calc(100vh - 74px);
@@ -67,32 +124,29 @@ cap2{
     margin-top: 55px;
     font-size: 13px;
     color: #A5C926;
-    font-family: 'Inter', sans-serif;
-font-family: 'Nunito Sans', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Varela Round', sans-serif;
+    font-family: "OpenSans-Regular";
+    
 }
 .start__title{
-    font-family: 'Inter', sans-serif;
-font-family: 'Nunito Sans', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Varela Round', sans-serif;
+    font-family: "VarelaRound-Regular";
 font-size: 39px;
-margin-top: -17px;
+margin-top: 17px;
 
 }
-.te{
-    margin-top:-30px ;
-}
+
 .start__btn{
     width: 153px;
     height: 48px;
     color: #ffffff;
     background-color: #A5C926;
-    border-color: #A5C926;
+    border: none;
     border-radius: 24px;
+    font-family: "OpenSans-Regular";
+    margin-top: 20px;
+
+
 }
-.container {
+.greeting {
     background: #fff;
     width: 570px;
     height: 308px;
@@ -100,6 +154,7 @@ margin-top: -17px;
     justify-content: center;
     align-items: center; 
     text-align: center;
+
 
 
 }
@@ -131,35 +186,35 @@ margin-top: -17px;
     font-size: 27px;
     margin-right: 127px; 
     margin-top: 48px;
-    font-family: 'Inter', sans-serif;
-font-family: 'Nunito Sans', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Varela Round', sans-serif;
+    font-family: "VarelaRound-Regular";
 }
 .ani{
     color: #fff;
     font-size: 27px;
-    
+    font-family: "VarelaRound-Regular";
     margin-left: 200px;
     margin-top: 48px;
-    font-family: 'Inter', sans-serif;
-font-family: 'Nunito Sans', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Varela Round', sans-serif;
+    
 }
 .shop{
+    background-color: #ffffff;
     margin-top: 16px;
     margin-left: 100px;
     width: 112px;
     height: 40px;
     border-radius: 20px;
+    font-family: "OpenSans-Regular";
+    border: none;
 }
 .shop_toys{
+    background-color: #ffffff;
     margin-top: 16px;
     margin-right: 80px;
     width: 112px;
     height: 40px;
     border-radius: 20px;
+    font-family: "OpenSans-Regular";
+    border: none;
 }
 .animals_bear{
     margin-top: -200px;
@@ -177,10 +232,7 @@ font-family: 'Varela Round', sans-serif;
 }
 .label_animals{
     margin-left: 135px;
-    font-family: 'Inter', sans-serif;
-font-family: 'Nunito Sans', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Varela Round', sans-serif;
+    font-family: "VarelaRound-Regular";
 font-size: 28px;
     
 }
@@ -199,26 +251,74 @@ font-size: 28px;
 
 }
 .button_stuffed{
+    margin-top: 6px;
     margin-left: 870px;
     background-color: #ffffff;
-    border-color: #a3a3a3;
-
+    width: 97px;
+    height: 26px;
+    text-align: left;
+border: none;
+border-bottom:2px solid #DDDDDD;
+font-family: "OpenSans-Regular";
     }
+.but{
+    margin-left: 10px;
+}
+.hr12{
+    margin-top: 35px;
+    background-color:#E5E5E5;
+    margin-left: 135px;
+    width:1170px ;
+    height: 2px;
+}
+ .rectangle12{
+   
+    width: 136px;
+    height: 2px;
+    background-color: #A5C926;
+    border: none;
+    margin-top: 0px;
+   
+ }
+ 
+
+
+
 .wooden{
     margin-left: 135px;
-    margin-left: 135px;
-    font-family: 'Inter', sans-serif;
-font-family: 'Nunito Sans', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Varela Round', sans-serif;
+    font-family: "VarelaRound-Regular";
 font-size: 28px;
 }
+.but2{
+    margin-left: 5px;
+}
+
 .button_wooden{
-    margin-left: 870px;
+    margin-top: 6px;
+    margin-left: 894px;
     background-color: #ffffff;
-    border-color: #a3a3a3;
+    width: 97px;
+    height: 26px;
+    text-align: left;
+border: none;
+border-bottom:2px solid #DDDDDD;
+font-family: "OpenSans-Regular";
 
 }   
+.hr13{
+    margin-top: 35px;
+    background-color:#E5E5E5;
+    margin-left: 135px;
+    width:1170px ;
+    height: 2px;
+}
+.rectangle13{
+    width: 136px;
+    height: 2px;
+    background-color: #A5C926;
+    border: none;
+    margin-top: 0px;
+}
 .stuffed_inner{
     margin-right: 30px;
 } 
@@ -233,7 +333,7 @@ font-size: 28px;
 .watch_our_story{
     margin-top: 120px;
     height: 464px;
-    width: 1440px;
+   
     background-image: url(img/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -265,19 +365,19 @@ font-size: 28px;
     margin-top: -50px;
 }
 .about{
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSans-Regular";
    font-size: 13px;
    line-height: 16px;
    font-weight: 400;
 
 }
 .watch{
-    font-family: 'Varela Round', sans-serif;
+    font-family: "VarelaRound-Regular";
     font-size: 36px;
     font-weight: 400;
 }
 .magic{
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSans-Regular";
     font-weight: 400;
     font-size: 14px;
     width: 718px;
@@ -286,20 +386,20 @@ font-size: 28px;
     margin-top: 120px;
     text-align: center;
     color: #A5C926;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSans-Regular";
     font-size: 13px;
     font-weight: 400;
 
 }
 .simple_color{
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSans-Regular";
     font-size: 31px;
     font-weight: 400;
 }
 .avia{
-    margin-top: 161px;
-    font-family: 'Varela Round', sans-serif;
+    
+    font-family: "VarelaRound-Regular";
     font-size: 31px;
     font-weight: 400;
     margin-left: 135px;
@@ -312,11 +412,13 @@ font-size: 28px;
     color: #999999;
 
 }
+
 .img2{
+    margin-top: 81px;
     margin-left: 135px;
-    margin-top: -120px;
+    
 }
-.all_info{
+.information{
     display: flex;
 }
 .button_get{
@@ -326,6 +428,7 @@ font-size: 28px;
     width: 145px;
     height: 48px;
     margin-left: 135px;
+    border: none;
     
 }
 .get_it_now{
@@ -388,13 +491,13 @@ border-width: 1px 1px;
 }
 .elastic{
     color: #A5C926;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSans-Regular";
     font-size: 13px;
     font-weight: 400;
 
 }
 .instagramm{
-    font-family: 'Varela Round', sans-serif;
+    font-family: "VarelaRound-Regular";
     font-weight: 400;
     font-size: 41px;
 
@@ -429,7 +532,7 @@ border-width: 1px 1px;
 }
 .toy_label{
     color: #fff;
-    font-family: 'Varela Round', sans-serif;
+    font-family: "VarelaRound-Regular";
     font-size: 21px;
     font-weight: 400;
     margin-left: 135px;
@@ -438,7 +541,7 @@ border-width: 1px 1px;
 }
 .footer__menu{
     display: flex;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSans-Regular";
 margin-left: 500px;
 margin-top: -47px;
 }
@@ -453,7 +556,7 @@ margin-top: -47px;
     color: #fff;
 }
 .creat{
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSans-Regular";
     color: #ffffff;
     font-size: 11px;
     margin-left: 135px;
@@ -462,14 +565,14 @@ margin-top: -47px;
     margin-top: 70px;
 }
 .ela{
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSans-Regular";
     color: #ffffff;
     font-size: 11px;
     font-weight: 400;
     margin-top: 70px;
 }
 .power{
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSans-Regular";
     color: #ffffff;
     font-size: 11px;
     font-weight: 400;
@@ -478,7 +581,7 @@ margin-top: -47px;
     margin-right: 20px;
 }
 .web{
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSans-Regular";
     color: #ffffff;
     font-size: 11px;
     font-weight: 400;
@@ -487,7 +590,7 @@ margin-top: -47px;
 
 }
 .st{
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSans-Regular";
     color: #ffffff;
     font-size: 11px;
     font-weight: 400;
@@ -495,7 +598,7 @@ margin-top: -47px;
     margin-right: 20px;
 }
 .lic{
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSans-Regular";
     color: #ffffff;
     font-size: 11px;
     font-weight: 400;
