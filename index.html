@@ -1,232 +1,335 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/reset.css" />
     <title>ToyStore</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <div class="container">
-            <div class="header_inner">
-            <div class="up_cap">
-                <div class="call">
-                    Call Us +1 213 975-5898                
+      <div class="container">
+        <div class="header_inner">
+          <div class="up_cap">
+            <div class="call">Call Us +1 213 975-5898</div>
+            <div class="email">Email: toystore@template.com</div>
+            <div class="icon">
+              <img src="img/twitter-icon.png" alt="twitter" class="icons" />
+              <img src="img/facebook-icon.png" alt="facebook" class="icons" />
+              <img src="img/inst.png" alt="instagramm" class="icons" />
+              <img src="img/mail.png" alt="mail" class="icons" />
+              <img src="img/Mask.png" alt="mask" class="icons" />
+            </div>
+          </div>
+          <nav class="nav_disable">
+            <div class="header__menu-lin">ToyStore</div>
+            <ul class="header__menu">
+              <li class="header__menu-item">
+                <a href="catalog.html" class="header__menu-link">Каталог</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Доставка</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">О нас</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Контакты</a>
+              </li>
+              <li class="header__menu-item2">
+                <a href="#" class="header__menu-link1">Корзина</a>
+              </li>
+              <div class="icon_basket">
+                <a href="#" class="bascet_icon">
+                  <img src="img/cart-icon.png" alt="basket" class="basket"
+                /></a>
+              </div>
+            </ul>
+            <div id="openModal" class="modal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title">
+                      Вход<a href="#close" title="Close" class="close"
+                        ><i class="fa fa-times-circle fa-lg"></i
+                      ></a>
+                    </h3>
+                  </div>
+                  <div class="modal-body">
+                    <form action="">
+                      <p>
+                        Email
+                        <input type="email" id="name" />
+                      </p>
+                      <p>Пароль <input type="password" id="password" /></p>
+                      <button onclick="sendJSON()">Войти</button>
+                    </form>
+                  </div>
                 </div>
-                 <div class="email">
-                    Email: toystore@template.com  
-                 </div>
-                 <div class="icon">
-                    <img src="img/twitter-icon.png" alt="twitter" class="icons">
-                    <img src="img/facebook-icon.png" alt="facebook" class="icons">
-                    <img src="img/inst.png" alt="instagramm" class="icons">
-                    <img src="img/mail.png" alt="mail" class="icons">
-                    <img src="img/Mask.png" alt="mask" class="icons">
-                 </div>
+              </div>
             </div>
-                    <nav class="nav_disable">
-                        <div class="header__menu-lin">ToyStore</div>
-                          <ul class="header__menu">
-                            
-                            <li class="header__menu-item"><a href="#" class="header__menu-link">Catalog</a></li>
-                            <li class="header__menu-item"><a href="#" class="header__menu-link">Delivery</a></li>
-                            <li class="header__menu-item"><a href="#" class="header__menu-link">About</a></li>
-                            <li class="header__menu-item"><a href="#" class="header__menu-link">Contacts</a></li>
-                            <li class="header__menu-item2"><a href="#" class="header__menu-link1">Cart</a></li>
-                            <div class="icon_basket">
-                            <a href="#" class="bascet_icon"> <img src="img/cart-icon.png" alt="basket" class="basket"></a>
-                            </div>
-                          </ul>
-                          <div class="quantity">0</div>
-                          
-                    </nav>
-                    
+            <div class="login">
+              <a href="#openModal"><i class="fa fa-user fa-lg"></i></a>
             </div>
+          </nav>
         </div>
-        
+      </div>
+      <script>
+        function sendJSON() {
+          let name = document.querySelector("#name");
+          let password = document.querySelector("#password");
+          let xhr = new XMLHttpRequest();
+          let url = "";
+          xhr.open("POST", url, true);
+          xhr.setRequestHeader("Content-Type", "application/json");
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              result.innerHTML = this.responseText;
+              localStorage.setItem;
+            }
+          };
+          var data = JSON.stringify({
+            name: name.value,
+            password: password.value,
+          });
+          xhr.send(data);
+        }
+      </script>
     </header>
     <main class="main">
-            <section class="start">
-                <div class="greeting">
-                    <div class="start_hello">
-                        Say Hello to ToyStore
-                    </div>
-                    <div class="start__title">
-                       <p class="fre">Free Ecommerce</p> <p class="te">Template for Webflow</p> 
-                    </div>
-                    <div class="start__buttons">
-                        <button class="start__btn">Open Catalog</button>
-                    </div>
-    
-                    
+      <section class="start">
+        <div class="greeting">
+          <div class="start_hello">Познакомьтесь с ToyStore</div>
+          <div class="start__title">
+            <p class="fre">Лучший подарок</p>
+            <p class="te">для вашего ребенка</p>
+          </div>
+          <div class="start__buttons">
+            <button
+              onclick="document.location='catalog.html'"
+              class="start__btn"
+            >
+              Открыть каталог
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="shop_now">
+        <div class="animals">
+          <div class="ani">Stuffed Animals</div>
+          <div class="animals_button">
+            <button onclick="document.location='catalog.html'" class="shop">
+              Купить сейчас
+            </button>
+          </div>
+          <div class="animals_bear">
+            <img
+              src="D:\work\project\img\bear2.png"
+              alt=""
+              class="animals_bear2"
+            />
+          </div>
+        </div>
+        <div class="toys">
+          <div class="toy">Wooden Toys</div>
+          <div class="toys_button">
+            <button
+              onclick="document.location='catalog.html'"
+              class="shop_toys"
+            >
+              Купить сейчас
+            </button>
+          </div>
+          <img
+            src="D:\work\project\img\flower2.png"
+            alt=""
+            class="wooden_flower2"
+          />
+        </div>
+      </section>
+      <section class="toy_carousel">
+        <div class="stuffed_animals">
+          <div class="st_ani">
+            <div class="label_animals">Stuffed Animals</div>
+            <div class="Stuffed">
+              <button
+                onclick="document.location='catalog.html'"
+                class="button_stuffed"
+              >
+                Посмотреть все игрушки<img
+                  src="img/button.png"
+                  alt=""
+                  class="but"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="hr12">
+            <div class="rectangle12"></div>
+          </div>
+          <div class="stuffed_in">
+            <img
+              src="D:\work\project\img\bear.png"
+              alt=""
+              class="stuffed_inner"
+            />
+            <img
+              src="D:\work\project\img\toy.png"
+              alt=""
+              class="stuffed_inner"
+            />
+            <img
+              src="D:\work\project\img\fox2.png"
+              alt=""
+              class="stuffed_inner"
+            />
+            <img src="img/fox.png" alt="" class="stuffed_inner" />
+          </div>
+        </div>
+        <div class="wooden_toy">
+          <div class="wd_td">
+            <div class="wooden">Wooden Toys</div>
+            <div class="wooden2">
+              <button
+                onclick="document.location='catalog.html'"
+                class="button_wooden"
+              >
+                Посмотреть все игрушки
+                <img src="img/button.png" alt="" class="but2" />
+              </button>
+            </div>
+          </div>
+          <div class="hr13">
+            <div class="rectangle13"></div>
+          </div>
+          <div class="wooden_in">
+            <img
+              src="D:\work\project\img\flower.png"
+              alt=""
+              class="wooden_inner"
+            />
+            <img
+              src="D:\work\project\img\car.png"
+              alt=""
+              class="wooden_inner"
+            />
+            <img
+              src="D:\work\project\img\camera.png"
+              alt=""
+              class="wooden_inner"
+            />
+            <img src="img/hare.png" alt="" class="wooden_inner" />
+          </div>
+        </div>
+      </section>
+      <section class="watch_our_story">
+        <div class="container2">
+          <h1 class="about">О магазине</h1>
+          <h4 class="watch">Смотрите нашу историю</h4>
+          <h1 class="magic">
+            Волшебной формулы для создания настроения и праздника не существует.
+            Но мы расскажем как сделать настоящий праздник для вашего ребенка.
+          </h1>
+          <div id="square"></div>
+          <div id="triangle_right"></div>
+        </div>
+      </section>
+      <section class="simple">
+        <div class="container3">
+          <div class="made">Обзоры</div>
+          <div class="simple_color">
+            <p class="s_c">Последние новинки из мира игрушек</p>
+            <p class="temp">Удобная доставка по РФ и СНГ</p>
+          </div>
+          <div class="avialabel">
+            <div class="all_info">
+              <div class="avia">Мы знаем, чего хотят дети!</div>
+              <div class="information">
+                <p class="info">
+                  Друзья! Рады приветствовать Вас, и наших постоянных клиентов,
+                  и впервые посетивших сайт нашего интернет-магазина игрушек для
+                  детей ToyStore! С удовольствием представляем вашему вниманию
+                  товары самых известных и уважаемых мировых брендов среди
+                  производителей игрушек.
+                </p>
+                <div class="img2">
+                  <img src="D:\work\project\img\pauk.jpg" alt="" class="pauk" />
                 </div>
-            </section>
-            <section class="shop_now"> 
-                
-                <div class="animals"> 
-                    <div class="ani">Stuffed Animals</div><div class="animals_button">
-                        <button class="shop"> Shop Now</button> 
-                    </div>
-                   <div class="animals_bear"> <img src="D:\work\project\img\bear2.png" alt="" class="animals_bear2"></div>
-                    
-                </div>
-                <div class="toys">
-                    <div class="toy">Wooden Toys
-                    </div>
-                    <div class="toys_button">
-                        <button class="shop_toys"> Shop Now</button> 
-                    </div>
-                    <img src="D:\work\project\img\flower2.png" alt="" class="wooden_flower2">
-                    
-                </div>
-            </section>
-            <section class="toy_carousel">
-                <div class="stuffed_animals">
-                    <div class="st_ani">
-                      <div class="label_animals">
-                        Stuffed Animals
-                      </div>
-                       <div class="Stuffed">
-                           <button class="button_stuffed"> See All Toys<img src="img/button.png" alt="" class="but"></button> 
-                       </div>
-                    
-                     </div> 
-                     <div class="hr12">
-                        
-                        <div class="rectangle12"></div>
-                        
-                    </div>
-                    <div class="stuffed_in">
-                        <img src="D:\work\project\img\bear.png" alt="" class="stuffed_inner">
-                        <img src="D:\work\project\img\toy.png" alt="" class="stuffed_inner">
-                        <img src="D:\work\project\img\fox2.png" alt="" class="stuffed_inner">
-                        <img src="img/fox.png" alt="" class="stuffed_inner">
-                    </div>
-                </div>
-                <div class="wooden_toy">
-                    <div class="wd_td">
-                     <div class="wooden">
-                        Wooden Toys
-                     </div>
-                    <div class="wooden2">
-                        <button class="button_wooden"> See All Toys <img src="img/button.png" alt="" class="but2"></button> 
-                    </div>
-                    </div>
-                    <div class="hr13">
-                        
-                        <div class="rectangle13"></div>
-                        
-                    </div>
-                <div class="wooden_in">
-                    <img src="D:\work\project\img\flower.png" alt="" class="wooden_inner">
-                    <img src="D:\work\project\img\car.png" alt="" class="wooden_inner">
-                    <img src="D:\work\project\img\camera.png" alt="" class="wooden_inner">
-                    <img src="img/hare.png" alt="" class="wooden_inner">
-                    
-                </div>    
-                </div>
-            </section>
-            <section class="watch_our_story">
-                <div class="container2"> 
-                    
-                <h1 class="about">About The Shop</h1>
-                <h4 class="watch"> Watch Our Story</h4>
-                <h1 class="magic"> There is no magic formula to write perfect ad copy. It is based on a number of factors, including ad placement, demographic, even the consumer’s mood.</h1>
-               <div id="square"></div>
-               <div id="triangle_right"></div>
-                </div>
-                 
-            </section>
-            <section class="simple">
-                <div class="container3">
-                    <div class="made">Made for Webflow</div>
-                    <div class="simple_color">
-                        <p class="s_c">Simple & Colorful Ecommerce </p>
-                        <p class="temp">Template for Your Business</p>
-                    </div>
-                    <div class="avialabel">
-                        
-                        <div class="all_info">
-                            <div class="avia">Avialabel for FREE!</div>
-                        <div class="information"><p class="info">A successful marketing plan relies heavily on the pulling-power of advertising copy.
-                             Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action. 
-                            There is no magic formula to write perfect ad copy</p><div class="img2">
-                              <img src="D:\work\project\img\pauk.jpg" alt="" class="pauk">
-                             </div></div>
-                             
-                        </div>
-                       
-                        <div class="get_it_now">
-                            <div class="get">
-                                <button class="button_get"> GET IT NOW</button> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="subscribe">
-                     <div class="tele">
-                        <img src="D:\work\project\img\tele.jpg" alt="" class="tele"></div>
-                        <div class="text">
-                          <div class="sub">
-                            Subscribe to our newsletter
-                          </div>
-                       <div class="g_dis"> <div class="g">& get</div><div class="dis">10% discount!</div></div>
-                       <div class="rectangle"></div><div class="rectangle2"></div>
-                       
-                     </div>
-                     </div>
-                </div>
-            </section>
-            <section class="insta">
-                <div class="container4">
-                    <div class="text2">
-                        <h6 class="elastic">@ElasticThemes</h6>
-                        <h1 class="instagramm">We're on Instagram!</h1>
-                    </div>
-                    <div class="photo">
-                        <img src="D:\work\project\img\one.jpg" alt="" class="inst">
-                        <img src="D:\work\project\img\two.jpg" alt="" class="inst">
-                        <img src="D:\work\project\img\three.jpg" alt="" class="inst">
-                        <img src="D:\work\project\img\four.jpg" alt="" class="inst">
-                        <img src="D:\work\project\img\five.jpg" alt="" class="inst">
-                        <img src="D:\work\project\img\six.jpg" alt="" class="inst">
-                    </div>
-                    <div class="button_instagramm">
-                        <button class="button_inst"> See More Photos</button>
-                    </div>
-                </div>
-            </section>
+              </div>
+            </div>
+            <div class="get_it_now">
+              <div class="get">
+                <button class="button_get">КУПИТЬ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="insta">
+        <div class="container4">
+          <div class="text2">
+            <h6 class="elastic">@ElasticThemes</h6>
+            <h1 class="instagramm">Мы в Instagram!</h1>
+          </div>
+          <div class="photo">
+            <img src="D:\work\project\img\one.jpg" alt="" class="inst" />
+            <img src="D:\work\project\img\two.jpg" alt="" class="inst" />
+            <img src="D:\work\project\img\three.jpg" alt="" class="inst" />
+            <img src="D:\work\project\img\four.jpg" alt="" class="inst" />
+            <img src="D:\work\project\img\five.jpg" alt="" class="inst" />
+            <img src="D:\work\project\img\six.jpg" alt="" class="inst" />
+          </div>
+          <div class="button_instagramm">
+            <button class="button_inst">Все фото</button>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
-        <div class="container6">
-            <div class="footer_inner">
-                <div class="label">
-                    <h2 class="toy_label">
-                        ToyStore
-                    </h2>
-                    <nav class="nav_footer">
-                        <ul class="footer__menu">
-                            <li class="header__menu-item1"><a href="#" class="footer__menu-link">Home</a></li>
-                            <li class="header__menu-item"><a href="#" class="footer__menu-link">Catalog</a></li>
-                            <li class="header__menu-item"><a href="#" class="footer__menu-link">Delivery</a></li>
-                            <li class="header__menu-item"><a href="#" class="footer__menu-link">About</a></li>
-                            <li class="header__menu-item"><a href="#" class="footer__menu-link">Contacts</a></li>
-                        </ul>
-    
-                    </nav>
-                </div>
-                <div class="basement">
-                    <h6 class="creat">Created with love by  </h6>
-                    <h6 class="ela"> Elastic Themes</h6>
-                    <h6 class="power">Powered by </h6>
-                     <h6 class="web">Webflow</h6>
-                     <h6 class="st">Style Guide</h6>
-                     <h6 class="lic">Licensing</h6>
-                </div>
-
+      <div class="container6">
+        <div class="footer_inner">
+          <div class="label">
+            <h2 class="toy_label">ToyStore</h2>
+            <nav class="nav_footer">
+              <ul class="footer__menu">
+                <li class="header__menu-item1">
+                  <a href="#" class="footer__menu-link">Домой</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="footer__menu-link">Каталог</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="footer__menu-link">Доставка</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="footer__menu-link">О нас</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="footer__menu-link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="basement">
+            <div class="el">
+              <h6 class="creat">Created with love by</h6>
+              <h6 class="creat">Elastic Themes</h6>
             </div>
+            <div class="power">
+              <h6 class="creat">Powered by</h6>
+              <h6 class="creat">Webflow</h6>
+              <h6 class="creat">Style Guide</h6>
+              <h6 class="creat">Licensing</h6>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
-</body>
+    <script src="scripts/main.js"></script>
+  </body>
 </html>
