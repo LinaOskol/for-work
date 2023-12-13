@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalog</title>
+    <link rel="stylesheet" href="assets/catalog_style.css" />
+    <link rel="stylesheet" href="assets/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="cap">
+        <div class="up_cap">
+          <div class="call">Call Us +1 213 975-5898</div>
+          <div class="email">Email: toystore@template.com</div>
+          <div class="icon">
+            <img src="img/twitter-icon.png" alt="twitter" class="icons" />
+            <img src="img/facebook-icon.png" alt="facebook" class="icons" />
+            <img src="img/inst.png" alt="instagramm" class="icons" />
+            <img src="img/mail.png" alt="mail" class="icons" />
+            <img src="img/Mask.png" alt="mask" class="icons" />
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <nav class="nav_disable">
+          <div class="header__menu-lin">ToyStore</div>
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a href="catalog.html" class="header__menu-link">Каталог</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Доставка</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">О нас</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Контакты</a>
+            </li>
+            <li class="header__menu-item2">
+              <a href="#" class="header__menu-link1">Корзина</a>
+            </li>
+          </ul>
+          <div id="openModal" class="modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title">
+                    Вход<a href="#close" title="Close" class="close"
+                      ><i class="fa fa-times-circle fa-lg"></i
+                    ></a>
+                  </h3>
+                </div>
+                <div class="modal-body">
+                  <form action="">
+                    <p>
+                      Email
+                      <input type="email" id="name" />
+                    </p>
+                    <p>Пароль <input type="password" id="password" /></p>
+                    <button onclick="sendJSON()">Войти</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="login">
+            <div class="icon_basket">
+              <a href="#" class="bascet_icon">
+                <img src="img/cart-icon.png" alt="basket" class="basket"
+              /></a>
+            </div>
+            <a href="#openModal"><i class="fa fa-user fa-lg"></i></a>
+          </div>
+        </nav>
+      </div>
+      <script>
+        function sendJSON() {
+          let name = document.querySelector("#name");
+          let password = document.querySelector("#password");
+          let xhr = new XMLHttpRequest();
+          let url = "";
+          xhr.open("POST", url, true);
+          xhr.setRequestHeader("Content-Type", "application/json");
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              result.innerHTML = this.responseText;
+              localStorage.setItem;
+            }
+          };
+          var data = JSON.stringify({
+            name: name.value,
+            password: password.value,
+          });
+          xhr.send(data);
+        }
+      </script>
+    </header>
+    <main>
+      <div class="container">
+        <nav class="main">
+          <ul>
+            <li><a href="index.html">Главная/</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+          </ul>
+        </nav>
+        <div class="grid">
+          <div class="product">
+            <img src="img/lolsurprise.png" alt="" class="lol" />
+            <div class="text">
+              <h3>Кукла L.O.L</h3>
+              <p>2436Р</p>
+            </div>
+          </div>
+          <div class="product">
+            <img src="img/lol2.png" alt="" class="lol" />
+            <div class="text">
+              <h3>Кукла L.O.L</h3>
+              <p>2436Р</p>
+            </div>
+          </div>
+          <div class="product">
+            <img src="img/lol3.png" alt="" class="lol" />
+            <div class="text">
+              <h3>Кукла L.O.L</h3>
+              <p>2436Р</p>
+            </div>
+          </div>
+          <div class="product">
+            <img src="img/lol4.png" alt="" class="lol" />
+            <div class="text">
+              <h3>Кукла L.O.L</h3>
+              <p>2436Р</p>
+            </div>
+          </div>
+          <div class="product">
+            <img src="img/lol5.png" alt="" class="lol" />
+            <div class="text">
+              <h3>Кукла L.O.L</h3>
+              <p>2436Р</p>
+            </div>
+          </div>
+          <div class="product">
+            <img src="img/lol6.png" alt="" class="lol" />
+            <div class="text">
+              <h3>Кукла L.O.L</h3>
+              <p>2436Р</p>
+            </div>
+          </div>
+          <div class="product">
+            <img src="img/lol7.png" alt="" class="lol" />
+            <div class="text">
+              <h3>Кукла L.O.L</h3>
+              <p>2436Р</p>
+            </div>
+          </div>
+          <div class="product">
+            <img src="img/lol8.png" alt="" class="lol" />
+            <div class="text">
+              <h3>Кукла L.O.L</h3>
+              <p>2436Р</p>
+            </div>
+          </div>
+          <div class="product">
+            <img src="img/lol9.png" alt="" class="lol" />
+            <div class="text">
+              <h3>Кукла L.O.L</h3>
+              <p>2436Р</p>
+            </div>
+          </div>
+          <div class="product">
+            <img src="img/lol10.png" alt="" class="lol" />
+            <div class="text">
+              <h3>Кукла L.O.L</h3>
+              <p>2436Р</p>
+            </div>
+          </div>
+          <div class="product">
+            <img src="img/lol11.png" alt="" class="lol" />
+            <div class="text">
+              <h3>Кукла L.O.L</h3>
+              <p>2436Р</p>
+            </div>
+          </div>
+          <div class="product">
+            <img src="img/lol12.png" alt="" class="lol" />
+            <div class="text">
+              <h3>Кукла L.O.L</h3>
+              <p>2436Р</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container6">
+        <div class="footer_inner">
+          <div class="label">
+            <h2 class="toy_label">ToyStore</h2>
+            <nav class="nav_footer">
+              <ul class="footer__menu">
+                <li class="header__menu-item1">
+                  <a href="#" class="footer__menu-link">Домой</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="footer__menu-link">Каталог</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="footer__menu-link">Доставка</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="footer__menu-link">О нас</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="footer__menu-link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="basement">
+            <div class="el">
+              <h6 class="creat">Created with love by</h6>
+              <h6 class="creat">Elastic Themes</h6>
+            </div>
+            <div class="power">
+              <h6 class="creat">Powered by</h6>
+              <h6 class="creat">Webflow</h6>
+              <h6 class="creat">Style Guide</h6>
+              <h6 class="creat">Licensing</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
