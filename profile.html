@@ -18,11 +18,19 @@
           <div class="call">Call Us +1 213 975-5898</div>
           <div class="email">Email: toystore@template.com</div>
           <div class="icon">
-            <img src="img/twitter-icon.png" alt="twitter" class="icons" />
-            <img src="img/facebook-icon.png" alt="facebook" class="icons" />
-            <img src="img/inst.png" alt="instagramm" class="icons" />
-            <img src="img/mail.png" alt="mail" class="icons" />
-            <img src="img/Mask.png" alt="mask" class="icons" />
+            <img
+              src="assets/img/twitter-icon.png"
+              alt="twitter"
+              class="icons"
+            />
+            <img
+              src="assets/img/facebook-icon.png"
+              alt="facebook"
+              class="icons"
+            />
+            <img src="assets/img/inst.png" alt="instagramm" class="icons" />
+            <img src="assets/img/mail.png" alt="mail" class="icons" />
+            <img src="assets/img/Mask.png" alt="mask" class="icons" />
           </div>
         </div>
       </div>
@@ -49,7 +57,7 @@
           <div class="login">
             <div class="icon_basket">
               <a href="#" class="bascet_icon">
-                <img src="img/cart-icon.png" alt="basket" class="basket"
+                <img src="assets/img/cart-icon.png" alt="basket" class="basket"
               /></a>
             </div>
             <a href="#openModal"><i class="fa fa-user fa-lg"></i></a>
@@ -58,7 +66,106 @@
       </div>
     </header>
     <main>
-      <div class="container"></div>
+      <div class="container">
+        <nav class="main">
+          <ul>
+            <li><a href="index.html">Главная/</a></li>
+            <li><a href="#">Профиль</a></li>
+          </ul>
+        </nav>
+        <div class="profile">
+          <div class="user">
+            <img src="assets/img/profile.jpg" alt="фото профиля" />
+            <h2 id="username"></h2>
+          </div>
+          <div class="grid-cart">
+            <div class="product_in_cart">
+              <img src="assets/img/shopping-cart.png  " alt="" />
+              <h3>Товары в корзине</h3>
+              <p>0 товаров</p>
+            </div>
+            <div class="like_product">
+              <img src="assets/img/heart.png" alt="" />
+              <h3>Избранные товары</h3>
+              <p>0 товаров</p>
+            </div>
+            <div class="purchased_goods">
+              <img src="assets/img/work_outline.png" alt="" />
+              <h3>Купленные товары</h3>
+              <p>3 товара</p>
+            </div>
+            <div class="order1">
+              <div class="text_order">
+                <h3>Заказ №</h3>
+                <p>Доставка курьером</p>
+              </div>
+              <img src="assets/img/baby.png" alt="" />
+            </div>
+
+            <div class="order2">
+              <div class="text_order">
+                <h3>Заказ №</h3>
+                <p>Доставка курьером</p>
+              </div>
+              <img src="assets/img/bear_order.png" alt="" />
+            </div>
+            <div class="order3">
+              <div class="text_order">
+                <h3>Заказ №</h3>
+                <p>Доставка курьером</p>
+              </div>
+              <img src="assets/img/bear_order2.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+    <script>
+      const user = JSON.parse(localStorage.getItem("my-user"));
+      alert(user.email);
+      document.getElementById(
+        "username"
+      ).innerHTML = `${user.email}<br>${user.name}`;
+    </script>
+    <footer class="footer">
+      <div class="container6">
+        <div class="footer_inner">
+          <div class="label">
+            <h2 class="toy_label">ToyStore</h2>
+            <nav class="nav_footer">
+              <ul class="footer__menu">
+                <li class="header__menu-item1">
+                  <a href="#" class="footer__menu-link">Домой</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="footer__menu-link">Каталог</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="footer__menu-link">Доставка</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="footer__menu-link">О нас</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#" class="footer__menu-link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="basement">
+            <div class="el">
+              <h6 class="creat">Created with love by</h6>
+              <h6 class="creat">Elastic Themes</h6>
+            </div>
+            <div class="power">
+              <h6 class="creat">Powered by</h6>
+              <h6 class="creat">Webflow</h6>
+              <h6 class="creat">Style Guide</h6>
+              <h6 class="creat">Licensing</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

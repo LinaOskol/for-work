@@ -18,11 +18,19 @@
           <div class="call">Call Us +1 213 975-5898</div>
           <div class="email">Email: toystore@template.com</div>
           <div class="icon">
-            <img src="img/twitter-icon.png" alt="twitter" class="icons" />
-            <img src="img/facebook-icon.png" alt="facebook" class="icons" />
-            <img src="img/inst.png" alt="instagramm" class="icons" />
-            <img src="img/mail.png" alt="mail" class="icons" />
-            <img src="img/Mask.png" alt="mask" class="icons" />
+            <img
+              src="assets/img/twitter-icon.png"
+              alt="twitter"
+              class="icons"
+            />
+            <img
+              src="assets/img/facebook-icon.png"
+              alt="facebook"
+              class="icons"
+            />
+            <img src="assets/img/inst.png" alt="instagramm" class="icons" />
+            <img src="assets/img/mail.png" alt="mail" class="icons" />
+            <img src="assets/img/Mask.png" alt="mask" class="icons" />
           </div>
         </div>
       </div>
@@ -72,7 +80,7 @@
           <div class="login">
             <div class="icon_basket">
               <a href="#" class="bascet_icon">
-                <img src="img/cart-icon.png" alt="basket" class="basket"
+                <img src="assets/img/cart-icon.png" alt="basket" class="basket"
               /></a>
             </div>
             <a href="#openModal"><i class="fa fa-user fa-lg"></i></a>
@@ -81,23 +89,55 @@
       </div>
       <script>
         function sendJSON() {
-          let name = document.querySelector("#name");
-          let password = document.querySelector("#password");
-          let xhr = new XMLHttpRequest();
-          let url = "";
-          xhr.open("POST", url, true);
-          xhr.setRequestHeader("Content-Type", "application/json");
-          xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-              result.innerHTML = this.responseText;
-              localStorage.setItem;
-            }
-          };
-          var data = JSON.stringify({
-            name: name.value,
-            password: password.value,
-          });
-          xhr.send(data);
+          let name = document.querySelector("#name").value;
+          let password = document.querySelector("#password").value;
+          alert(
+            JSON.stringify({
+              email: name,
+              password: password,
+            })
+          );
+          window.location.href = "D:/work/project/profile.html";
+          fetch("http://localhost:3000/login", {
+            method: "PUT",
+            mode: "cors",
+            body: JSON.stringify({
+              email: name,
+              password: password,
+            }),
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+            },
+          })
+            .then((res) => res.json())
+            .then((res) => {
+              if (res.statusCode) {
+                alert(res.message);
+              } else {
+                localStorage.setItem("my-jwt", res.token);
+              }
+            });
+
+          fetch("http://localhost:3000/users/me", {
+            method: "GET",
+            mode: "cors",
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+              Authorization: `Bearer ${localStorage.getItem("my-jwt")}`,
+            },
+          })
+            .then((res) => res.json())
+            .then((res) => {
+              if (res.statusCode) {
+                alert(res.message);
+              } else {
+                localStorage.setItem("my-user", JSON.stringify(res));
+                modalWindow = document.getElementById("openModal");
+                modalWindow.style.display = "none";
+                document.body.style.overflow = "";
+                window.location = "file:///D:/work/project/profile.html";
+              }
+            });
         }
       </script>
     </header>
@@ -111,84 +151,84 @@
         </nav>
         <div class="grid">
           <div class="product">
-            <img src="img/lolsurprise.png" alt="" class="lol" />
+            <img src="assets/img/lolsurprise.png" alt="" class="lol" />
             <div class="text">
               <h3>Кукла L.O.L</h3>
               <p>2436Р</p>
             </div>
           </div>
           <div class="product">
-            <img src="img/lol2.png" alt="" class="lol" />
+            <img src="assets/img/lol2.png" alt="" class="lol" />
             <div class="text">
               <h3>Кукла L.O.L</h3>
               <p>2436Р</p>
             </div>
           </div>
           <div class="product">
-            <img src="img/lol3.png" alt="" class="lol" />
+            <img src="assets/img/lol3.png" alt="" class="lol" />
             <div class="text">
               <h3>Кукла L.O.L</h3>
               <p>2436Р</p>
             </div>
           </div>
           <div class="product">
-            <img src="img/lol4.png" alt="" class="lol" />
+            <img src="assets/img/lol4.png" alt="" class="lol" />
             <div class="text">
               <h3>Кукла L.O.L</h3>
               <p>2436Р</p>
             </div>
           </div>
           <div class="product">
-            <img src="img/lol5.png" alt="" class="lol" />
+            <img src="assets/img/lol5.png" alt="" class="lol" />
             <div class="text">
               <h3>Кукла L.O.L</h3>
               <p>2436Р</p>
             </div>
           </div>
           <div class="product">
-            <img src="img/lol6.png" alt="" class="lol" />
+            <img src="assets/img/lol6.png" alt="" class="lol" />
             <div class="text">
               <h3>Кукла L.O.L</h3>
               <p>2436Р</p>
             </div>
           </div>
           <div class="product">
-            <img src="img/lol7.png" alt="" class="lol" />
+            <img src="assets/img/lol7.png" alt="" class="lol" />
             <div class="text">
               <h3>Кукла L.O.L</h3>
               <p>2436Р</p>
             </div>
           </div>
           <div class="product">
-            <img src="img/lol8.png" alt="" class="lol" />
+            <img src="assets/img/lol8.png" alt="" class="lol" />
             <div class="text">
               <h3>Кукла L.O.L</h3>
               <p>2436Р</p>
             </div>
           </div>
           <div class="product">
-            <img src="img/lol9.png" alt="" class="lol" />
+            <img src="assets/img/lol9.png" alt="" class="lol" />
             <div class="text">
               <h3>Кукла L.O.L</h3>
               <p>2436Р</p>
             </div>
           </div>
           <div class="product">
-            <img src="img/lol10.png" alt="" class="lol" />
+            <img src="assets/img/lol10.png" alt="" class="lol" />
             <div class="text">
               <h3>Кукла L.O.L</h3>
               <p>2436Р</p>
             </div>
           </div>
           <div class="product">
-            <img src="img/lol11.png" alt="" class="lol" />
+            <img src="assets/img/lol11.png" alt="" class="lol" />
             <div class="text">
               <h3>Кукла L.O.L</h3>
               <p>2436Р</p>
             </div>
           </div>
           <div class="product">
-            <img src="img/lol12.png" alt="" class="lol" />
+            <img src="assets/img/lol12.png" alt="" class="lol" />
             <div class="text">
               <h3>Кукла L.O.L</h3>
               <p>2436Р</p>

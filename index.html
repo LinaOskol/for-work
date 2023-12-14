@@ -19,11 +19,19 @@
             <div class="call">Call Us +1 213 975-5898</div>
             <div class="email">Email: toystore@template.com</div>
             <div class="icon">
-              <img src="img/twitter-icon.png" alt="twitter" class="icons" />
-              <img src="img/facebook-icon.png" alt="facebook" class="icons" />
-              <img src="img/inst.png" alt="instagramm" class="icons" />
-              <img src="img/mail.png" alt="mail" class="icons" />
-              <img src="img/Mask.png" alt="mask" class="icons" />
+              <img
+                src="assets/img/twitter-icon.png"
+                alt="twitter"
+                class="icons"
+              />
+              <img
+                src="assets/img/facebook-icon.png"
+                alt="facebook"
+                class="icons"
+              />
+              <img src="assets/img/inst.png" alt="instagramm" class="icons" />
+              <img src="assets/img/mail.png" alt="mail" class="icons" />
+              <img src="assets/img/Mask.png" alt="mask" class="icons" />
             </div>
           </div>
           <nav class="nav_disable">
@@ -46,7 +54,10 @@
               </li>
               <div class="icon_basket">
                 <a href="#" class="bascet_icon">
-                  <img src="img/cart-icon.png" alt="basket" class="basket"
+                  <img
+                    src="assets/img/cart-icon.png"
+                    alt="basket"
+                    class="basket"
                 /></a>
               </div>
             </ul>
@@ -81,23 +92,55 @@
       </div>
       <script>
         function sendJSON() {
-          let name = document.querySelector("#name");
-          let password = document.querySelector("#password");
-          let xhr = new XMLHttpRequest();
-          let url = "";
-          xhr.open("POST", url, true);
-          xhr.setRequestHeader("Content-Type", "application/json");
-          xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-              result.innerHTML = this.responseText;
-              localStorage.setItem;
-            }
-          };
-          var data = JSON.stringify({
-            name: name.value,
-            password: password.value,
-          });
-          xhr.send(data);
+          let name = document.querySelector("#name").value;
+          let password = document.querySelector("#password").value;
+          alert(
+            JSON.stringify({
+              email: name,
+              password: password,
+            })
+          );
+          window.location.href = "D:/work/project/profile.html";
+          fetch("http://localhost:3000/login", {
+            method: "PUT",
+            mode: "cors",
+            body: JSON.stringify({
+              email: name,
+              password: password,
+            }),
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+            },
+          })
+            .then((res) => res.json())
+            .then((res) => {
+              if (res.statusCode) {
+                alert(res.message);
+              } else {
+                localStorage.setItem("my-jwt", res.token);
+              }
+            });
+
+          fetch("http://localhost:3000/users/me", {
+            method: "GET",
+            mode: "cors",
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+              Authorization: `Bearer ${localStorage.getItem("my-jwt")}`,
+            },
+          })
+            .then((res) => res.json())
+            .then((res) => {
+              if (res.statusCode) {
+                alert(res.message);
+              } else {
+                localStorage.setItem("my-user", JSON.stringify(res));
+                modalWindow = document.getElementById("openModal");
+                modalWindow.style.display = "none";
+                document.body.style.overflow = "";
+                window.location = "file:///D:/work/project/profile.html";
+              }
+            });
         }
       </script>
     </header>
@@ -128,11 +171,7 @@
             </button>
           </div>
           <div class="animals_bear">
-            <img
-              src="D:\work\project\img\bear2.png"
-              alt=""
-              class="animals_bear2"
-            />
+            <img src="assets/img/bear2.png" alt="" class="animals_bear2" />
           </div>
         </div>
         <div class="toys">
@@ -145,11 +184,7 @@
               Купить сейчас
             </button>
           </div>
-          <img
-            src="D:\work\project\img\flower2.png"
-            alt=""
-            class="wooden_flower2"
-          />
+          <img src="assets\img\flower2.png" alt="" class="wooden_flower2" />
         </div>
       </section>
       <section class="toy_carousel">
@@ -162,7 +197,7 @@
                 class="button_stuffed"
               >
                 Посмотреть все игрушки<img
-                  src="img/button.png"
+                  src="assets/img/button.png"
                   alt=""
                   class="but"
                 />
@@ -173,22 +208,10 @@
             <div class="rectangle12"></div>
           </div>
           <div class="stuffed_in">
-            <img
-              src="D:\work\project\img\bear.png"
-              alt=""
-              class="stuffed_inner"
-            />
-            <img
-              src="D:\work\project\img\toy.png"
-              alt=""
-              class="stuffed_inner"
-            />
-            <img
-              src="D:\work\project\img\fox2.png"
-              alt=""
-              class="stuffed_inner"
-            />
-            <img src="img/fox.png" alt="" class="stuffed_inner" />
+            <img src="assets/img/bear.png" alt="" class="stuffed_inner" />
+            <img src="assets/img/toy.png" alt="" class="stuffed_inner" />
+            <img src="assets/img/fox2.png" alt="" class="stuffed_inner" />
+            <img src="assets/img/fox.png" alt="" class="stuffed_inner" />
           </div>
         </div>
         <div class="wooden_toy">
@@ -200,7 +223,7 @@
                 class="button_wooden"
               >
                 Посмотреть все игрушки
-                <img src="img/button.png" alt="" class="but2" />
+                <img src="assets/img/button.png" alt="" class="but2" />
               </button>
             </div>
           </div>
@@ -208,22 +231,10 @@
             <div class="rectangle13"></div>
           </div>
           <div class="wooden_in">
-            <img
-              src="D:\work\project\img\flower.png"
-              alt=""
-              class="wooden_inner"
-            />
-            <img
-              src="D:\work\project\img\car.png"
-              alt=""
-              class="wooden_inner"
-            />
-            <img
-              src="D:\work\project\img\camera.png"
-              alt=""
-              class="wooden_inner"
-            />
-            <img src="img/hare.png" alt="" class="wooden_inner" />
+            <img src="assets/img/flower.png" alt="" class="wooden_inner" />
+            <img src="assets/img/car.png" alt="" class="wooden_inner" />
+            <img src="assets/img/camera.png" alt="" class="wooden_inner" />
+            <img src="assets/img/hare.png" alt="" class="wooden_inner" />
           </div>
         </div>
       </section>
@@ -258,7 +269,7 @@
                   производителей игрушек.
                 </p>
                 <div class="img2">
-                  <img src="D:\work\project\img\pauk.jpg" alt="" class="pauk" />
+                  <img src="assets/img/pauk.jpg" alt="" class="pauk" />
                 </div>
               </div>
             </div>
@@ -277,12 +288,12 @@
             <h1 class="instagramm">Мы в Instagram!</h1>
           </div>
           <div class="photo">
-            <img src="D:\work\project\img\one.jpg" alt="" class="inst" />
-            <img src="D:\work\project\img\two.jpg" alt="" class="inst" />
-            <img src="D:\work\project\img\three.jpg" alt="" class="inst" />
-            <img src="D:\work\project\img\four.jpg" alt="" class="inst" />
-            <img src="D:\work\project\img\five.jpg" alt="" class="inst" />
-            <img src="D:\work\project\img\six.jpg" alt="" class="inst" />
+            <img src="assets/img/one.jpg" alt="" class="inst" />
+            <img src="assets/img/two.jpg" alt="" class="inst" />
+            <img src="assets/img/three.jpg" alt="" class="inst" />
+            <img src="assets/img/four.jpg" alt="" class="inst" />
+            <img src="assets/img/five.jpg" alt="" class="inst" />
+            <img src="assets/img/six.jpg" alt="" class="inst" />
           </div>
           <div class="button_instagramm">
             <button class="button_inst">Все фото</button>
