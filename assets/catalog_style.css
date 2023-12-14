@@ -291,3 +291,113 @@ header .container {
 .footer__menu {
   list-style: none;
 }
+#username {
+  font-family: "OpenSans-Regular";
+}
+.user img {
+  width: 100px;
+  border: 1px solid #a5c926;
+  border-radius: 50%;
+  margin: 30px;
+}
+.profile {
+  width: 550px;
+  margin: 0 auto;
+}
+.user {
+  display: flex;
+  align-items: center;
+}
+.grid-cart h3 {
+  font-family: "OpenSans-Regular";
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.grid-cart p {
+  font-family: "OpenSans-Regular";
+  font-size: 14px;
+  font-weight: 400;
+  color: #4f4f4f;
+  margin-top: 10px;
+}
+.grid-cart {
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 150px 100px 100px 100px;
+  grid-gap: 35px;
+  margin: 50px 0px 100px 30px;
+}
+.product_in_cart,
+.like_product,
+.purchased_goods {
+  border: 1px solid #a5c926;
+  border-radius: 15px;
+  padding: 10px;
+}
+.order1 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  border-radius: 15px;
+  border: 1px solid #a5c926;
+  width: 520px;
+  display: flex;
+  padding: 0 20px 0 20px;
+}
+.order2 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  border-radius: 15px;
+  border: 1px solid #a5c926;
+  width: 520px;
+  display: flex;
+  padding: 0 20px 0 20px;
+}
+.order3 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  border-radius: 15px;
+  border: 1px solid #a5c926;
+  width: 520px;
+  display: flex;
+  padding: 0 20px 0 20px;
+}
+.order1 h3 {
+  font-family: "OpenSans-Regular";
+  font-size: 20px;
+  font-weight: 600;
+}
+.order2 h3 {
+  font-family: "OpenSans-Regular";
+  font-size: 20px;
+  font-weight: 600;
+}
+.order3 h3 {
+  font-family: "OpenSans-Regular";
+  font-size: 20px;
+  font-weight: 600;
+}
+.order1 p {
+  font-family: "OpenSans-Regular";
+  font-size: 16px;
+  font-weight: 400;
+}
+.order2 p {
+  font-family: "OpenSans-Regular";
+  font-size: 16px;
+  font-weight: 400;
+}
+.order3 p {
+  font-family: "OpenSans-Regular";
+  font-size: 16px;
+  font-weight: 400;
+}
+.order1 img {
+  padding: 0 0 0 150px;
+}
+.order2 img {
+  padding: 0 0 0 150px;
+}
+.order3 img {
+  padding: 0 0 0 150px;
+}
